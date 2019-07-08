@@ -37,6 +37,12 @@ public class FileManagerService {
     private static ConnectionData getdataFromLine(String line) {
         ConnectionData connectionData = new ConnectionData();
 
+        String [] words = line.split(" ");
+        connectionData.setIp(words[2]);
+        connectionData.setSessionId(Integer.valueOf(words [0]));
+        connectionData.setTime(Long.valueOf(words[1]));
+        connectionData.setUserLogin(words [3]);
+
         return connectionData;
     }
 
@@ -49,11 +55,7 @@ public class FileManagerService {
         }
     }
 
-    public static ConnectionData getTextFromLine (String line) {
 
-        ConnectionData connectionData = new ConnectionData();
-
-        return connectionData;
     }
 }
 
