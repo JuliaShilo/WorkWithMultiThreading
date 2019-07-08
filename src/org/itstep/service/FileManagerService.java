@@ -3,7 +3,6 @@ package org.itstep.service;
 import org.itstep.model.ConnectionData;
 
 import java.io.*;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +47,13 @@ public class FileManagerService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static ConnectionData getTextFromLine (String line) {
+
+        ConnectionData connectionData = new ConnectionData();
+
+        return connectionData;
     }
 }
 
